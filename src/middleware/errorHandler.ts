@@ -13,10 +13,8 @@ export function errorHandler(err: unknown, req: Request, res: Response, next: Ne
     return;
   }
 
-  if (err && typeof err === "object" && "status" in err && typeof (err as { status: unknown }).status === "number") {
-    const status = (err as { status: number; message: string }).status;
-    const message = (err as { message: string }).message || "request failed";
-    res.status(status).json({ error: message });
+  if (err instanceof Error && "status" in err && typeof err.status === "number") {
+    res.status(err.status).json({ error: err.message || "request failed" });
     return;
   }
 
