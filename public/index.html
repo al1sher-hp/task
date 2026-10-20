@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Учёт оплат — учебный центр</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>Учёт оплат</h1>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Должники за месяц</h2>
+
+    <div class="field">
+      <label for="month-input">Месяц</label>
+      <input type="month" id="month-input">
+    </div>
+
+    <div id="debtors-total" class="total-debt"></div>
+    <div id="debtors-list" aria-live="polite"></div>
+  </section>
+
+  <section class="card">
+    <h2>Добавить оплату</h2>
+
+    <form id="payment-form">
+      <div class="field">
+        <label for="student-select">Ученик</label>
+        <select id="student-select" required></select>
+      </div>
+
+      <div class="field">
+        <label for="amount-input">Сумма (so'm)</label>
+        <input type="number" id="amount-input" min="1" step="1" inputmode="numeric" required>
+      </div>
+
+      <div class="field">
+        <label for="date-input">Дата</label>
+        <input type="date" id="date-input" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Добавить оплату</button>
+    </form>
+
+    <p id="payment-message" role="status"></p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

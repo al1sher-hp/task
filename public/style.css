@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f5f7;
+  color: #1f2430;
+  /* 16px base avoids iOS Safari auto-zoom on input focus. */
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.app-header {
+  background: #2f6fed;
+  color: #fff;
+  padding: 16px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.field:last-of-type {
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #c9ccd4;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2f6fed;
+  outline-offset: 1px;
+}
+
+.btn-primary {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #2f6fed;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:active {
+  background: #2558c7;
+}
+
+.total-debt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.debtor-card {
+  border: 1px solid #e3e5ea;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.debtor-card:last-child {
+  margin-bottom: 0;
+}
+
+.debtor-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.debtor-meta {
+  color: #5a6072;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.debtor-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 2px 0;
+}
+
+.debtor-debt {
+  font-weight: 700;
+  color: #d13438;
+}
+
+.empty-state {
+  text-align: center;
+  color: #5a6072;
+  padding: 24px 8px;
+}
+
+#payment-message {
+  margin: 12px 0 0;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+#payment-message.success {
+  color: #1a7f37;
+}
+
+#payment-message.error {
+  color: #d13438;
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}
